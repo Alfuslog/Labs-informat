@@ -42,10 +42,11 @@ def prog2():
 
 def prog3():
     try:
-        stp = ''
+        lst1 = []
+        lst2 = []
         n = []
         ln = int(input("Введите длину списка:.."))
-        l = [(random.randint(-100, 100) / (random.randint())) for i in range(ln)]
+        l = [(random.randint(-1000, 1000) / 10**(random.randint(1, 4))) for i in range(ln)]
         min = l[0]
         print(l)
         for i in l:
@@ -54,7 +55,10 @@ def prog3():
         print(min)
         for i in l:
             if abs(i) <= 1:
-                l.insert(0, i)
+                lst1.insert(0, i)
+            elif abs(i) >= 1:
+                lst2.insert(0, i)
+        print(lst1 + lst2)
     except:
         oshibka()
         
